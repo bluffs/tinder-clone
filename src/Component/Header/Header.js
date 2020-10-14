@@ -14,11 +14,11 @@ const Header = (props) => {
         <div className="header">
             {props.backButton ? (
             <IconButton onClick={() => history.replace(props.backButton)}>
-                <ArrowBackIosIcon fontSize="Large" className="header__icon" />
+                <ArrowBackIosIcon fontSize="large" className="header__icon" />
             </IconButton>
             ) : (
             <IconButton>
-                <PersonIcon className="header__icon" fontSize="Large"/>
+                <PersonIcon className="header__icon" fontSize="large"/>
             </IconButton>
             )}
             
@@ -30,7 +30,7 @@ const Header = (props) => {
             </Link>
             <Link to="/chat">
                 <IconButton>
-                    <ForumIcon className="header__icon" fontSize="Large"/>
+                    <ForumIcon className="header__icon" fontSize="large"/>
                 </IconButton>
             </Link>
         </div>

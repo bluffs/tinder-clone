@@ -7,16 +7,16 @@ const Chats = () => {
     return (
         <div className="chats">
             <Chat
-                name="Mark"
-                message="Yo whats up !hahahahahahahahahahahahahahahaha fburibevjhr e"
+                name="Maggie"
+                message="Yo whats up !"
                 timestamp="35 mins ago"
-                profilePic="https://keryjames.fr/wp-content/uploads/2019/09/mockup-kj-facebook-1.jpg"
+                profilePic="https://www.gstatic.com/tv/thumb/persons/41544/41544_v9_ba.jpg"
             />
             <Chat
-                name="Paul"
-                message="Hey dude !"
+                name="Penelope"
+                message="Hey!"
                 timestamp="1 hour ago"
-                profilePic="https://static.fnac-static.com/multimedia/Images/FD/Comete/127351/CCP_IMG_ORIGINAL/1663249.jpg"
+                profilePic="https://upload.wikimedia.org/wikipedia/commons/d/d6/Penelope_Cruz_Cannes_2018.jpg"
             />
         </div>
     );
