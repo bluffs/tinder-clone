@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import database from '../../firebase';
 
 import TinderCards from '../TinderCards/TinderCards';
@@ -7,27 +7,23 @@ import SwipeButtons from '../SwipeButtons/SwipeButtons';
 const MainPage = () => {
 
     const [people, setPeople] = useState([]);
-
+    const tinderCardsRef = useRef();
     useEffect(() => {
         const unsubscribe = database.collection('people').onSnapshot(snapshot => {
             setPeople(snapshot.docs.map(doc => doc.data()))
         });
-
         return () => {
             unsubscribe();
         }
-        
     }, []);
 
-    const swipe = () => {
-        let tab = [...people];
-        tab.pop();
-        setPeople(tab);
+    const swipe = (dir) => {
+        tinderCardsRef.current.buttonSwipe(dir);
     }
 
     return (
         <div>
-            <TinderCards people={people}/>
+            <TinderCards people={people} ref={tinderCardsRef}/>
             <SwipeButtons swipe={swipe}/>
         </div>
     )
